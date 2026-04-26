@@ -13,6 +13,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<MyAppContext>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IAuthHelper, AuthHelper>();
+builder.Services.AddScoped<ITodoHelper, TodoHelper>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
